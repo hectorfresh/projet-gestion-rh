@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/favicon.ico">
     <title>Exprimer un besoin</title>
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/tabler.min.css">
