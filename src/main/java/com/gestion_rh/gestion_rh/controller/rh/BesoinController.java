@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BesoinController {
 
-    @GetMapping("/formulaire")
+    @GetMapping("/saisie_besoin")
     public String afficherFormulaire() {
         return "rh/formulaire_besoin";
     }
