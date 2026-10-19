@@ -38,6 +38,9 @@ BLOC 1 :
                 . Date souhaitee    
                 . Bouton valider + appel fonction insert dans besoin  : statut par defaut en attente 
 
+
+
+
     - User Connecte  : RH
 
         -Classe : HistoriqueBesoin, HistoriqueRepository, HistoriqueService
