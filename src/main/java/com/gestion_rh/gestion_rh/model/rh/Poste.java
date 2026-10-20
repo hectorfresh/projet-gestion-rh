@@ -1,22 +1,26 @@
 package com.gestion_rh.gestion_rh.model.rh;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity 
 @Table(name = "poste")
-@Data 
+@Getter
+@Setter
 public class Poste {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    @Column(name = "libelle", nullable = false)
+
     private String nom;
-    
+
+    @ManyToOne
+    @JoinColumn(name="role_id")
+    private Role role;
+
+    @ManyToOne
+    @JoinColumn(name="departement_id")
+    private Departement departement;
 }

@@ -7,8 +7,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.gestion_rh.gestion_rh.service.rh.PosteService;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller 
+@Controller
+@RequestMapping("/poste")
 public class PosteController {
    private final PosteService posteService;
 
@@ -17,12 +19,13 @@ public class PosteController {
     this.posteService=posteService;
    }
 
-   @GetMapping("/postes")
+   @GetMapping("/list")
    public String listePoste(Model model){
     model.addAttribute("listePostes",posteService.findAll());
     return "rn/formulaire_besoin";
    }
-   
+
+
 
 
     
