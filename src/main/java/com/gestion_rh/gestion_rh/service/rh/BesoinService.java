@@ -53,6 +53,11 @@ public class BesoinService {
     }
 
     @Transactional(readOnly = true)
+    public List<Besoin> rechercheBesoinPasEncoreDansValidation() {
+        return besoinRepository.findAllWithNoChild();
+    }
+
+    @Transactional(readOnly = true)
     public Besoin getById(Long id) {
         return besoinRepository.findById(id)
                 .orElseThrow(() ->

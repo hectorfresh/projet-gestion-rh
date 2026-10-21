@@ -28,6 +28,18 @@
             <c:out value="${erreur}"/>
         </div>
     </c:if>
+    <a href="${pageContext.request.contextPath}/besoin/liste"
+           class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 style="margin-right: 6px; vertical-align: -4px;">
+                <path d="M12 5v14"/>
+                <path d="M5 12h14"/>
+            </svg>
+            Liste des demandes de besoin
+    </a>
 
     <div class="card shadow-sm">
         <div class="card-body p-4">

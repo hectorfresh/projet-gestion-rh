@@ -27,13 +27,20 @@ public class BesoinController {
         this.employeRepository = employeRepository;
     }
 
+    @GetMapping("/liste")
+    public String afficherListe(Model  model) {
+        model.addAttribute("besoins", besoinService.getAll());
+
+        return "/besoin/liste";
+    }
+
     @GetMapping("/form")
     public String afficherFormulaire(Model model) {
         model.addAttribute("besoin", new Besoin());
         model.addAttribute("postes", posteService.findAll());
         model.addAttribute("employes",employeRepository.findAll());
 
-        return "/rh/form-besoin";
+        return "/besoin/form";
     }
 
     @PostMapping("/save")
