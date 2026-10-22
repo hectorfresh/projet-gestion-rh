@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class ValidationBesoinService {
-    ValidationBesoinRepository validationBesoinRepository;
+    private final ValidationBesoinRepository validationBesoinRepository;
 
     public ValidationBesoinService(ValidationBesoinRepository validationBesoinRepository) {
         this.validationBesoinRepository = validationBesoinRepository;

@@ -10,15 +10,25 @@ INSERT INTO role(nom) VALUES
 ('finance'),
 ('direction');
 
-INSERT INTO poste(nom,role_id) VALUES
-('comptable',1),
-('programmeur junior',1),
-('directeur',5);
+INSERT INTO departement(nom) VALUES
+('DSI'),
+('Finance'),
+('Marketing'),
+('Direction');
+
+INSERT INTO poste(nom,role_id,departement_id) VALUES
+('comptable',1,2),
+('programmeur junior',1,1),
+('directeur',5,4);
 
 INSERT INTO contrat(salaire,poste_id) VALUES
 (1000000,3);
 
 INSERT INTO  employe(contrat_id) VALUES
 (1);
+
+INSERT INTO statut_besoin(nom) VALUES
+('accepter'),
+('refuser');
 
 
